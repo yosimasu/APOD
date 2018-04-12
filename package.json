@@ -9,9 +9,12 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "dva-core": "^1.2.1",
     "httpstatuses": "^3.0.0",
     "react": "~15.4.1",
-    "react-native": "0.42.3"
+    "react-native": "0.42.3",
+    "react-redux": "^5.0.7",
+    "redux": "^3.7.2"
   },
   "devDependencies": {
     "@storybook/addon-actions": "3.2.14",

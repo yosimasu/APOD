@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   AppRegistry,
@@ -11,9 +5,19 @@ import {
   View
 } from 'react-native';
 
+import dva from './dva';
+import states from './states';
 import Astronomy from './components/Astronomy';
 
-export default class APOD extends Component {
+const app = dva({
+  initialState: {},
+  models: states,
+  onError(e) {
+    console.log('onError', e)
+  },
+});
+
+class APOD extends Component {
   render() {
     return (
       <View style={styles.container}>
@@ -32,4 +36,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('APOD', () => APOD);
+AppRegistry.registerComponent('APOD', () => app.start(<APOD />));
