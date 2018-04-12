@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   AppRegistry,
@@ -11,14 +5,19 @@ import {
   View
 } from 'react-native';
 
+import { Provider } from 'react-redux';
+
+import store from './store';
 import Astronomy from './components/Astronomy';
 
 export default class APOD extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Astronomy />
-      </View>
+      <Provider store={store}>
+        <View style={styles.container}>
+          <Astronomy />
+        </View>
+      </Provider>
     );
   }
 }
