@@ -14,7 +14,9 @@
     "react": "~15.4.1",
     "react-native": "0.42.3",
     "react-redux": "^5.0.7",
-    "redux": "^3.7.2"
+    "redux": "^3.7.2",
+    "redux-observable": "^0.18.0",
+    "rxjs": "^5.5.9"
   },
   "devDependencies": {
     "@storybook/addon-actions": "3.2.14",
