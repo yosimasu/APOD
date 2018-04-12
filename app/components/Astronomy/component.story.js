@@ -10,6 +10,14 @@ const name = 'Astronomy';
 const load = () => {
   const story = storiesOf(name, module);
 
+  story.add('NO DATA', () => {
+    const props = {
+        reload: action('reload'),
+    };
+
+    return (<Astronomy {...props} />);
+  });
+
   story.add('Astronomy', () => {
     const props = {
         // https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY

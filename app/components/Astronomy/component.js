@@ -7,24 +7,35 @@ import {
     StyleSheet
 } from 'react-native';
 
+const Reload = ({ reload }) => {
+    if (reload) {
+        return (<Button title="重載" onPress={reload} />);
+    }
+    return null;
+};
+
 class Astronomy extends React.Component {
     render() {
         const { data, reload } = this.props;
-        const { title, url, explanation, date } = data;
-        return (
-            <View style={styles.container}>
-                <Text style={styles.title}>{title}</Text>
-                <View style={styles.imageContainer}>
-                    <Image
-                        style={{width: '80%', height: 200, resizeMode: 'cover'}}
-                        source={{uri: url}}
-                    />
+        if (data) {
+            const { title, url, explanation, date } = data;
+            return (
+                <View style={styles.container}>
+                    <Text style={styles.title}>{title}</Text>
+                    <View style={styles.imageContainer}>
+                        <Image
+                            style={{width: '80%', height: 200, resizeMode: 'cover'}}
+                            source={{uri: url}}
+                        />
+                    </View>
+                    <Text style={styles.explanation}>{explanation}</Text>
+                    <Text style={styles.date}>{date}</Text>
+                    <Reload reload={reload} />
                 </View>
-                <Text style={styles.explanation}>{explanation}</Text>
-                <Text style={styles.date}>{date}</Text>
-                <Button title="重載" onPress={reload} />
-            </View>
-        );
+            );
+        }
+
+        return <View><Text>NO DATA</Text></View>;
     }
 }
 
