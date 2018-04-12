@@ -1,4 +1,5 @@
 import reducers from './reudcers';
+import effects from './effects';
 
 export default {
     namespace: 'app',
@@ -6,4 +7,5 @@ export default {
         data: null,
     },
     reducers,
+    effects,
 };

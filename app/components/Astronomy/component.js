@@ -4,7 +4,8 @@ import {
     Text,
     Image,
     Button,
-    StyleSheet
+    StyleSheet,
+    ActivityIndicator,
 } from 'react-native';
 
 const Reload = ({ reload }) => {
@@ -16,7 +17,11 @@ const Reload = ({ reload }) => {
 
 class Astronomy extends React.Component {
     render() {
-        const { data, reload } = this.props;
+        const { data, reload, loading } = this.props;
+        if (loading) {
+            return (<ActivityIndicator />);
+        }
+
         if (data) {
             const { title, url, explanation, date } = data;
             return (
