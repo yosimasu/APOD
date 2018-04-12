@@ -1,7 +1,9 @@
+import reducers from './reudcers';
+
 export default {
     namespace: 'app',
     state: {
-        loading: false,
         data: null,
     },
+    reducers,
 };
