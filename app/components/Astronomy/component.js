@@ -3,9 +3,10 @@ import { View, Text } from 'react-native';
 
 class Astronomy extends React.Component {
     render() {
+        const { data } = this.props;
         return (
             <View>
-                <Text>Astronomy</Text>
+                <Text>{JSON.stringify(data, null, 2)}</Text>
             </View>
         );
     }
