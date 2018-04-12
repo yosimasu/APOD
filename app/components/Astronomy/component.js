@@ -4,19 +4,24 @@ import {
     Text,
     Image,
     Button,
-    StyleSheet
+    StyleSheet,
+    ActivityIndicator,
 } from 'react-native';
 
-const Reload = ({ reload }) => {
+const Reload = ({ title, reload }) => {
     if (reload) {
-        return (<Button title="重載" onPress={reload} />);
+        return (<Button title={title} onPress={reload} />);
     }
     return null;
 };
 
 class Astronomy extends React.Component {
     render() {
-        const { data, reload } = this.props;
+        const { data, reload, loading } = this.props;
+        if (loading) {
+            return (<ActivityIndicator />);
+        }
+
         if (data) {
             const { title, url, explanation, date } = data;
             return (
@@ -30,7 +35,7 @@ class Astronomy extends React.Component {
                     </View>
                     <Text style={styles.explanation}>{explanation}</Text>
                     <Text style={styles.date}>{date}</Text>
-                    <Reload reload={reload} />
+                    <Reload title="重載" reload={reload} />
                 </View>
             );
         }
@@ -38,7 +43,7 @@ class Astronomy extends React.Component {
         return (
             <View>
                 <Text>NO DATA</Text>
-                <Reload reload={reload} />
+                <Reload title="載入" reload={reload} />
             </View>
         );
     }
