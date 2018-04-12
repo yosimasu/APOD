@@ -35,7 +35,12 @@ class Astronomy extends React.Component {
             );
         }
 
-        return <View><Text>NO DATA</Text></View>;
+        return (
+            <View>
+                <Text>NO DATA</Text>
+                <Reload reload={reload} />
+            </View>
+        );
     }
 }
 
