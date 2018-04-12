@@ -22,6 +22,7 @@ const load = () => {
             "title": "Fortuitous Flash Candidate for the Farthest Star Yet Seen", 
             "url": "https://apod.nasa.gov/apod/image/1804/FarthestStar_Hubble_1080.jpg"
         },
+        reload: action('reload'),
     };
 
     return (<Astronomy {...props} />);

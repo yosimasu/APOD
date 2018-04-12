@@ -1,12 +1,20 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Image, Button } from 'react-native';
 
 class Astronomy extends React.Component {
     render() {
-        const { data } = this.props;
+        const { data, reload } = this.props;
+        const { title, url, explanation, date } = data;
         return (
             <View>
-                <Text>{JSON.stringify(data, null, 2)}</Text>
+                <Text>{title}</Text>
+                <Image
+                    style={{width: '80%', height: 200, resizeMode: 'cover'}}
+                    source={{uri: url}}
+                />
+                <Text>{explanation}</Text>
+                <Text>{date}</Text>
+                <Button title="重載" onPress={reload} />
             </View>
         );
     }
