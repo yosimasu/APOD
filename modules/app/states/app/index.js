@@ -1,4 +1,4 @@
-import reducers from './reudcers';
+import reducers from './reducers';
 import effects from './effects';
 
 export default {
