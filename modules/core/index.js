@@ -1,5 +1,5 @@
-import dva from './dva';
+export { NavigationActions } from 'react-navigation';
 
-export {
-    dva
-}
+export { default as dva } from './dva';
+
+export const delay = time => new Promise(resolve => setTimeout(resolve, time));

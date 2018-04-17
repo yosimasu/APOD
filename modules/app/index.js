@@ -9,7 +9,7 @@ import {
 import { dva } from '@pro/core';
 
 import states from './states';
-import Astronomy from './components/Astronomy';
+import Router from './components/Router';
 
 const app = dva({
   initialState: {},
@@ -19,23 +19,4 @@ const app = dva({
   },
 });
 
-class APOD extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Astronomy />
-      </View>
-    );
-  }
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-});
-
-AppRegistry.registerComponent('APOD', () => app.start(<APOD />));
+AppRegistry.registerComponent('APOD', () => app.start(<Router />));
