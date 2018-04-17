@@ -1,4 +1,4 @@
-import { apod } from 'app/api';
+import { apod } from '@pro/app/api';
 
 export default function* (action, { call, put }) {
     yield put({ type: 'fetchDataStart' });

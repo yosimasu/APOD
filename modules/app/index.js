@@ -1,11 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
+
 import {
   AppRegistry,
   StyleSheet,
   View
 } from 'react-native';
 
-import dva from './dva';
+import { dva } from '@pro/core';
+
 import states from './states';
 import Astronomy from './components/Astronomy';
 
@@ -17,7 +19,7 @@ const app = dva({
   },
 });
 
-class APOD extends Component {
+class APOD extends React.Component {
   render() {
     return (
       <View style={styles.container}>
