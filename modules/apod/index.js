@@ -1,11 +1,11 @@
 import states from './states';
-import Astronomy from './components/Astronomy';
+import Navigator from './components/Navigator';
 
 export default {
     states,
     navigator: {
-        Astronomy: {
-            screen: Astronomy
+        APODNavigator: {
+            screen: Navigator
         }
     }
 }
