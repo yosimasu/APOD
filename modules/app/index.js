@@ -8,8 +8,16 @@ import {
 
 import { dva } from '@pro/core';
 
-import states from './states';
+import appStates from './states';
+import features from './features';
 import Router from './components/Router';
+
+let states = [...appStates];
+features.forEach(feature => {
+  if (feature.states) {
+    states = [...states, ...feature.states];
+  }
+});
 
 const app = dva({
   initialState: {},

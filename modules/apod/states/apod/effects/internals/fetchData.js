@@ -1,7 +1,7 @@
 import moment from 'moment';
 import HTTPStatuses from 'httpstatuses';
 
-import { apod } from '@pro/app/api';
+import { apod } from '@pro/apod/api';
 
 export default function* (action, { call, put }) {
     yield put({ type: 'fetchDataStart' });

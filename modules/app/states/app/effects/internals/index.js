@@ -1,5 +1,1 @@
-import fetchData from './fetchData';
-
-export default {
-    fetchData,
-}
+export default {};

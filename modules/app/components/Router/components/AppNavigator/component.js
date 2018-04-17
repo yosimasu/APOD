@@ -6,11 +6,11 @@ import {
     StackNavigator,
 } from 'react-navigation'
 
+import navigators from '@pro/app/navigators';
+
 const AppNavigator = StackNavigator(
     {
-        Home: {
-            screen: View
-        }
+        ...navigators,
     },
     {
       headerMode: 'none',
