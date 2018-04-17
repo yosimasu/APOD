@@ -1,5 +1,6 @@
 function init(stories) {
-    stories.push(require('@pro/apod/components/Astronomy/component.story.js'));
+    stories.push(require('@pro/apod/components/APOD/component.story.js'));
+    stories.push(require('@pro/apod/components/Astronomy/component.story.js'));    
 }
 
 function loadStories() {

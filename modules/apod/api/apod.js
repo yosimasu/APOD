@@ -11,7 +11,6 @@ export default ({ date }) => {
         date,
         api_key: API_KEY,
     });
-    console.log(uri.readable());
     return axios
         .get(uri.readable())
         .then(resp => {;
