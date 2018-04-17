@@ -6,6 +6,7 @@ import Component from './component';
 
 const mapStateToProps = (state) => ({
     data: state.app.data,
+    error: state.app.error,
     loading: state.app.loading,
 });
 

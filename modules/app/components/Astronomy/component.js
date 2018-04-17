@@ -17,7 +17,22 @@ const Reload = ({ reload }) => {
 
 class Astronomy extends React.Component {
     render() {
-        const { data, reload, loading } = this.props;
+        const {
+            data,
+            error,
+            loading,
+            reload,
+        } = this.props;
+
+        if (error) {
+            return (
+                <View>
+                    <Text style={styles.title}>ERROR</Text>
+                    <Reload reload={reload} />
+                </View>
+            );
+        }
+
         if (loading) {
             return (<ActivityIndicator />);
         }
@@ -42,7 +57,7 @@ class Astronomy extends React.Component {
 
         return (
             <View>
-                <Text>NO DATA</Text>
+                <Text style={styles.title}>NO DATA</Text>
                 <Reload reload={reload} />
             </View>
         );

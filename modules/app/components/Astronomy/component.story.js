@@ -10,6 +10,15 @@ const name = 'Astronomy';
 const load = () => {
   const story = storiesOf(name, module);
 
+  story.add('ERROR', () => {
+    const props = {
+        error: true,
+        reload: action('reload'),
+    };
+
+    return (<Astronomy {...props} />);
+  });
+
   story.add('NO DATA', () => {
     const props = {
         reload: action('reload'),
