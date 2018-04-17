@@ -15,16 +15,19 @@
     "dva-core": "1.2.1",
     "httpstatuses": "3.0.0",
     "immer": "1.2.1",
+    "moment": "2.22.1",
     "prop-types": "15.6.1",
     "react": "16.0.0",
     "react-native": "0.50.4",
     "react-redux": "5.0.7",
-    "redux": "3.7.2"
+    "redux": "3.7.2",
+    "urijs": "1.19.1"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "3.2.14",
-    "@storybook/addon-links": "3.2.14",
-    "@storybook/react-native": "3.2.14",
+    "@storybook/addon-actions": "3.2.19",
+    "@storybook/addon-links": "3.2.19",
+    "@storybook/react-native": "3.2.19",
+    "babel-core": "6.26.0",
     "babel-jest": "22.4.3",
     "babel-preset-react-native": "4.0.0",
     "jest": "22.4.3",
