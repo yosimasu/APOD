@@ -4,7 +4,7 @@ import effects from './effects';
 export default {
     namespace: 'apod',
     state: {
-        data: null,
+        data: {},
         error: false,
         loading: false,
     },

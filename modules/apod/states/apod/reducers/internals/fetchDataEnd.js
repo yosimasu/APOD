@@ -1,5 +1,6 @@
 import produce from 'immer';
 
 export default (state, { payload }) => produce(state, (draftState) => {
-    draftState.loading = false;
+    const { date } = payload;
+    draftState.data[date].loading = false;
 });
